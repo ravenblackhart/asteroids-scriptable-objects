@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using Variables;
 
 namespace Ship
 {
     public class Health : MonoBehaviour
     {
-        private int _health = 10;
+        private int _health;
         
         private const int MIN_HEALTH = 0;
         

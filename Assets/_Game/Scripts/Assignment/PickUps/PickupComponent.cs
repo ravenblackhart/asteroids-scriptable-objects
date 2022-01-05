@@ -22,17 +22,6 @@ namespace Assignment.PickUps
             gameObject.GetComponent<SpriteRenderer>().sprite = Pickup.Sprite;
         }
         
-        
-        public void Start()
-        {
-            xPos = Random.Range(-6, 6);
-            yPos = Random.Range(-4, 4);
-
-            spawnPos = new Vector2(xPos, yPos); 
-            
-            gameObject.transform.position = spawnPos;
-            gameObject.tag = "PickUp"; 
-        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {

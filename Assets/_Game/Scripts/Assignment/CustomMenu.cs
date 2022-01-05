@@ -12,13 +12,17 @@ using UnityEngine;
             GameObject go = new GameObject("new Pickup");
             go.AddComponent<PickupComponent>(); 
             go.AddComponent<SpriteRenderer>();
-            go.AddComponent<Rigidbody2D>();
             go.AddComponent<CircleCollider2D>();
+
+            //Baser Presets
+            go.GetComponent<CircleCollider2D>().isTrigger = true;
+            go.tag = "PickUp"; 
 
             //Ensure proper parenting & register to undo system
             GameObjectUtility.SetParentAndAlign(go, menuCommand.context as GameObject);
             Undo.RegisterCreatedObjectUndo(go, "Create " + go.name);
             Selection.activeObject = go;
+            
         }
         
     }

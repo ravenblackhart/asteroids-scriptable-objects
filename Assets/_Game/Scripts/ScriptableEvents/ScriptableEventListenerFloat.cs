@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace ScriptableEvents
 {
-    public class ScriptableEventListenerFloat : ScriptableEventListener_Abs<float>
+    public class ScriptableEventListenerFloat : ScriptableEventListener<float, ScriptableEventFloat, UnityEvent<float>>
     {
     }
 }

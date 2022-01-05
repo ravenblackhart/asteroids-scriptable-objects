@@ -35,9 +35,10 @@ namespace Assignment.PickUps
                     Debug.Log($"Boost Get. Health now {_health.GetValue()}");
                 }
                 
+                Destroy(gameObject);
             }
             
-            Destroy(gameObject);
+            
         }
     }
 }
